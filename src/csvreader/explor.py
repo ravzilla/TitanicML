@@ -4,6 +4,7 @@ Created on Oct 28, 2015
 @author: Ravi
 '''
 import csvr
+print('')
 import math
 import statistics as stats
 anaProps = 'age'.split(sep = ' ')
