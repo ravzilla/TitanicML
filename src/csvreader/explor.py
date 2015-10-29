@@ -4,7 +4,6 @@ Created on Oct 28, 2015
 @author: Ravi
 '''
 import csvr
-print('')
 import math
 import statistics as stats
 anaProps = 'age'.split(sep = ' ')
@@ -15,10 +14,10 @@ def getBasicData()->list:
     propVals = []
     for traits in anaProps:
         propVals.append([traits,
-                         round(stats.mean([eval('x.'+traits) for x in passList]),3),
+                         round(stats.mean([eval('x.'+traits) for x in passList if x!=-1]),3),
                          round(stats.median([eval('x.'+traits) for x in passList]),3),
                          round(stats.mode([eval('x.'+traits) for x in passList]),3),
-                         sum(1 for x in passList if x!='')]
+                         sum(1 for x in passList if x!=-1)]
                          
                         
                         )
